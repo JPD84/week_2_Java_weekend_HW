@@ -14,7 +14,6 @@ public class Guitars extends InstrumentAbstractClass implements IPlay, ISell {
         this.instrumentSound = instrumentSound;
     }
 
-
     public int getStringNo() {
         return stringNo;
     }
