@@ -10,7 +10,7 @@ public class TrumpetsTest {
 
     @Before
     public void before(){
-        trumpets = new Trumpets("wind instrument", 3, "vibrating column of air", 350.90, 420.50);
+        trumpets = new Trumpets("wind instrument", 3, "vibrating column of air", 350, 450);
     }
 
     @Test
@@ -49,24 +49,31 @@ public class TrumpetsTest {
 
     @Test
     public void getCostBought(){
-        assertEquals(350.90,trumpets.getCostBought());
+        assertEquals(350.00,trumpets.getCostBought());
 
     }
 
     @Test
     public void setCostBought(){
-        trumpets.setCostBought(360.50);
-        assertEquals(360.50,trumpets.getCostBought());
+        trumpets.setCostBought(350);
+        assertEquals(350.00,trumpets.getCostBought());
     }
 
     @Test
     public void getCostSold(){
-        assertEquals(420.50,trumpets.getCostSold());
+        assertEquals(450.00,trumpets.getCostSold());
     }
 
     @Test
     public void PlaySound() {
         assertEquals("vibrating column of air",trumpets.instrumentsound());
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(100,trumpets.calculateMarkup(), 0);
+
+
     }
 
 }

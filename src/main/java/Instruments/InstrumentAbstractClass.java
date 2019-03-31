@@ -2,7 +2,7 @@ package Instruments;
 
 import Shop.ISell;
 
-public abstract class InstrumentAbstractClass implements ISell {
+public abstract class InstrumentAbstractClass implements ISell, IPlay {
 
     private String type;
     private double costBought;

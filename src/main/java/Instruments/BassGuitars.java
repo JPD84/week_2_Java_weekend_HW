@@ -2,7 +2,7 @@ package Instruments;
 
 import Shop.ISell;
 
-public class BassGuitars extends InstrumentAbstractClass implements IPlay {
+public class BassGuitars extends InstrumentAbstractClass implements IPlay, ISell {
 
     private int stringNo;
     private String instrumentSound;
@@ -35,6 +35,14 @@ public class BassGuitars extends InstrumentAbstractClass implements IPlay {
     public String instrumentsound() {
         return this.instrumentSound;
     }
+
+    public double calculateMarkup() {
+        return this.getCostSold() - this.getCostBought();
+    }
+
+
+
+
 }
 
 

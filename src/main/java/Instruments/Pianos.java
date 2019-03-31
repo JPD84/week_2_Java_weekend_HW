@@ -1,6 +1,8 @@
 package Instruments ;
 
-public class Pianos extends InstrumentAbstractClass implements IPlay {
+import Shop.ISell;
+
+public class Pianos extends InstrumentAbstractClass implements IPlay, ISell {
 
     private int stringNo;
     private String instrumentSound;
@@ -40,5 +42,9 @@ public class Pianos extends InstrumentAbstractClass implements IPlay {
 
     public String instrumentsound() {
         return this.instrumentSound;
+    }
+
+    public double calculateMarkup() {
+        return this.getCostBought() - this.getCostSold();
     }
 }

@@ -74,4 +74,12 @@ public class BassGuitarTest {
         assertEquals("vibration of strings",bassGuitars.instrumentsound());
     }
 
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(40,bassGuitars.calculateMarkup(), 0);
+
+
+    }
+
 }

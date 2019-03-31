@@ -73,6 +73,13 @@ public class PianosTest {
         assertEquals("Sound of tuned Strings",pianos.instrumentsound());
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(400,pianos.calculateMarkup(), 0);
+
+
+    }
+
 
 }
 

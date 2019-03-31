@@ -31,5 +31,14 @@ public class Shop {
         return stock.size();
     }
 
+    public int calculateProfit(){
+        int profit = 0;
+        for(ISell stockItem : this.stock){
+            profit += stockItem.calculateMarkup();
+        }
+
+        return profit;
+    }
+
 
 }
